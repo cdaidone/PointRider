@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PointRider</title>
+
+	<!-- Bootstrap -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" >
+	<link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" >
+
+    <!--Stylesheets-->
+	<link href="assets/css/get-shit-done.css" rel="stylesheet" >
+    <link href="assets/css/demo2.css" rel="stylesheet" >
+
+    <!-- Fonts & Icons -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<div id="navbar-full">
+    <div id="navbar">
+
+        <nav class="navbar navbar-ct-blue navbar-transparent navbar-top" role="navigation">
+          <div class="container">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html" style="color: #1084ff;">PointRider</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="app.html" style="color: #1084ff;">App</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </div>
+
+</div>
+<div class="container tim-container" style="max-width:800px; padding-top:25px; padding-bottom: 100px; height: 350px;">
+	<div>
+		<img src="assets/img/PR_logobig.png" alt="PointRider" id="logo">
+	</div>
+	<div class="row" id="topbuttons">
+		<div class="col-md-6">
+			<button type="button" class="btn btn-default btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="Welcome to PointRider! Use this app to help keep track of rider points and to help strategize your use of point riders. Below, you can click on different places to remind you of the points awarded for each place. You can also click on the 'Show Team Points' button to toggle the team points table. As you update your Google Sheets document, this table is automatically updated. Good luck!" id="instructions">Instructions</button>
+		</div>
+		<div class="col-md-6">
+			<button type="button" class="btn btn-default btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="In order to qualify for Regional Finals and move up to the next division, riders in the following divisions must earn the listed amount of points: Open | Intermediate | Novice | Adv. WTC | Walk Trot (36 Points) and Beg. WTC (18 Points)." id="qualify">Qualify</button>
+		</div>
+	</div>
+
+
+	<h2 class="text-center">IHSA Points<br><small>Click below to see the amount of points earned for each ribbon awarded.</small></h2>
+
+    <div class="row" id="places">
+       	<div class="col-md-2">
+       		<button class="btn btn-block btn-md  btn-default" style="color: #1084ff; border-color: #1084ff;" id="1st">1st Place</button>
+       		<p id="1">7 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="2nd">2nd Place</button>
+       		<p id="2">5 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="3rd">3rd Place</button>
+       		<p id="3">4 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="4th">4th Place</button>
+       		<p id="4">3 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="5th">5th Place</button>
+       		<p id="5">2 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="6th">6th Place</button>
+       		<p id="6">1 Point</p>
+       	</div>
+    </div>
+</div>
+<div>
+	<button class="btn btn-block btn-lg btn-info btn-fill" id="showtable">Show Team Points</button>
+</div>
+
+<div class="wrapper">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-10 col-md-offset-1">
+
+<div class="fresh-table full-color-" style="background-color: #1084ff;">
+
+        <div class="toolbar">
+            <img src="assets/img/PR_logowhite.png" alt="PointRider">
+        </div>
+
+		<table id="points" class="table"></table>
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer" style="background-color: #666; height: 100%; width: 100%; text-align: center; padding-top: 2em; padding-bottom: 2em; margin-bottom: 0;">
+      <div class="container">
+      	<div class="row">
+      		<div class="col-md-4">
+        		<p style="color: #fff;">By Carina Daidone</p>
+        	</div>
+        	<div class="col-md-4">
+        		<img src="assets/img/PR_logowhite.png" alt="PointRider">
+        	</div>
+        	<div class="col-md-4">
+        		<p><a href="http://ihsainc.com" target="#" style="color: #fff;">Learn more about IHSA</a></p>
+        	</div>
+        </div>
+      </div>
+    </footer>
+
+<!--Javascript/JQuery-->
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/tabletop.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+	<script type="text/javascript" src="assets/js/points.js"></script>
+
+<script type="text/javascript">
+	$('.btn-tooltip').tooltip();
+    $('.label-tooltip').tooltip();
+/* Data */
+	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1LL66uk_vCT4QrqrXDDgVPm8bi_3nwhQe51N05706sPU/pubhtml?gid=0&single=true';
+	var tabletop;
+	Tabletop.init( { key: public_spreadsheet_url,
+		callback: drawTable } );
+	function drawTable(sheets, tabletop) {
+		var sheet = sheets['Sheet1'],
+		column_names = sheet.column_names;
+		var table = $("#points");
+		var header = $("<thead></thead>");
+		for (var i = 0; i < column_names.length; i++) {
+          $("<th></th>").text(column_names[i]).appendTo(header);
+		}
+		table.append(header);
+
+		var tbody = $("<tbody></tbody>");
+		for (var i = 0; i < sheet.elements.length; i++) {
+				var row = sheet.elements[i];
+				var html_row = $("<tr></tr>");
+				for (var j = 0; j < column_names.length; j++) {
+						var column_name = column_names[j];
+            $("<td></td>").text(row[column_name]).appendTo(html_row);
+				}
+				tbody.append(html_row);
+		}
+    table.append(tbody);
+}
+        var $table = $('#points'),
+            $alertBtn = $('#alertBtn'),
+            full_screen = false;
+
+        $().ready(function(){
+            $table.bootstrapTable({
+                toolbar: ".toolbar",
+
+                showRefresh: false,
+                search: false,
+                showToggle: false,
+                showColumns: false,
+                pagination: true,
+                striped: false,
+                sortable: true,
+                pageSize: 8,
+                pageList: [8,10,25,50,100],
+
+                formatShowingRows: function(pageFrom, pageTo, totalRows){
+                    //do nothing here, we don't want to show the text "showing x of y from..."
+                },
+                formatRecordsPerPage: function(pageNumber){
+                    return pageNumber + " rows visible";
+                },
+                icons: {
+                    refresh: 'fa fa-refresh',
+                    toggle: 'fa fa-th-list',
+                    columns: 'fa fa-columns',
+                    detailOpen: 'fa fa-plus-circle',
+                    detailClose: 'fa fa-minus-circle'
+                }
+            });
+        });
+
+</script>
+
+</body>
+</html>
